@@ -8,7 +8,7 @@ const validateToken = (req, res, next) => {
     return res.status(400).json({ message: "User is not logged in" });
   }
   try {
-    jwt.verify(tokenAccess, process.env.JWT_KEY, async (err, decode) => {
+    jwt.verify(tokenAccess, process.env.SECRET, async (err, decode) => {
       if (err) {
         return res.status(400).json({ message: err.message });
       }

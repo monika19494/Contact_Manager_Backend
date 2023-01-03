@@ -16,11 +16,10 @@
   "name": "contactsmanager-backend",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
-   "start": "nodemon index.js",
-   "test": "echo \"Error: no test specified\" && exit 1",
-   "serve": "nodemon index.js"
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
