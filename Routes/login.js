@@ -60,7 +60,7 @@ router.post("/login", async (req, res) => {
           exp: Math.floor(Date.now() / 10) + 60 * 60,
           data: userData._id,
         },
-        process.env.JWT_KEY
+        process.env.SECRET
       );
       res.status(200).json({
         Status: "Successful",
