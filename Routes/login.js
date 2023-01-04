@@ -19,6 +19,8 @@ router.post(
       if (!error.isEmpty()) {
         res.status(400).json({ message: error.array() });
       }
+
+      
       //checking whether user already exists
       const userAlreadyExists = await User.findOne({ email });
       if (userAlreadyExists)
@@ -36,7 +38,7 @@ router.post(
           email,
           password: hash,
         });
-        //console.log(data);
+    
         res.status(200).json({
           status: "success",
           message: "Registration Successful",

@@ -5,7 +5,7 @@ const validateToken = (req, res, next) => {
   const tokenAccess = req.header("token");
 
   if (!tokenAccess) {
-    return res.status(400).json({ message: "User is not logged in" });
+    return res.status(400).json({ message: "User is not  sucessfully logged in" });
   }
   try {
     jwt.verify(tokenAccess, process.env.SECRET, async (err, decode) => {
