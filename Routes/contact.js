@@ -49,17 +49,7 @@ router.get("/api/v1/contacts",validateToken,async(req,res)=>{
             status:"success",
             users
         })
-        // if(users.length){
-        //     res.status(200).json({
-        //         status:"success",
-        //         users
-        //     })
-        // }
-        // else{
-        //     res.status(404).json({
-        //         status:"failed"
-        //     })
-        // }
+      
     }
     catch(e){
         res.status(400).json({
